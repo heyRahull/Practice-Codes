@@ -1,0 +1,6 @@
+SELECT u.user_id, u.first_name, u.last_name, COUNT(m.message_id) AS messages_sent
+FROM users u
+JOIN messages m ON u.user_id = m.sender_id
+GROUP BY u.user_id, u.first_name, u.last_name
+ORDER BY u.user_id DESC
+LIMIT 5;
