@@ -1,0 +1,3 @@
+SELECT first_name AS "Staff First Name", position, salary
+FROM staff
+WHERE salary > 50000;
